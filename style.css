@@ -1,0 +1,36 @@
+body {
+	margin:0px;
+	width:100vw;
+	height:80vh;
+	font-family:sans-serif;
+	display:flex;
+}
+
+#form {
+	width:50%;
+	min-width:200px;
+	text-align:center;
+	padding:10px 10px 40px 10px;
+	margin:auto;
+}
+	h1 {
+		color:#AAA;
+	}
+	#room {
+		color:#222;
+	}
+#submit {
+	background-color:limegreen;
+	color:white;
+	border:none;
+	font-weight:bold;
+}
+	#submit:hover {
+		background-color:rgb(40,180,40);
+	}
+select, #submit {
+	font-size:14px;
+	padding:10px 20px;
+	border-radius:0px;
+	outline:none;
+}
