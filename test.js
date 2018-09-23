@@ -1,25 +1,4 @@
-var tests = [
-{
-	"label": "LHS Website",
-	"link": "https://lhs.fuhsd.org/",
-	"visible": true
-},
-{
-	"label": "LHS Student",
-	"link": "https://lhs.fuhsd.org/student-portal",
-	"visible": true
-},
-{
-	"label": "Quiz #2",
-	"link": "#quiz-two",
-	"visible": false
-},
-{
-	"label": "Quiz #3",
-	"link": "#number-three",
-	"visible": true
-}
-];
+var tests = [];
 
 var select = document.getElementById("options");
 var submit = document.getElementById("submit");
