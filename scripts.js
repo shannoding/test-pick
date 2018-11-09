@@ -8,7 +8,7 @@ var prev;
 
 // tabletop code at https://github.com/jsoma/tabletop
 // gets rows of Google Sheet
-var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1R4PFHTE2PEGfS8twMUfrTl1Am71oCunR8dgh0LBNOJM/';
+var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1GjkKmRhAK35cBk6rcXjT8XcsGWwiqrDHGq7xvhlqLQw/edit';
 // url must be set to viewable by everyone
   function init() {
     Tabletop.init( { key: publicSpreadsheetUrl,
