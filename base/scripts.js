@@ -3,12 +3,11 @@ var tests = []; // array of objects with "label", "link", and "visible"
 var form = document.getElementById("form");
 var submit = document.getElementById("submit");
 var options = document.getElementsByClassName("option");
-var selected;
-var prev;
+var selected = -1;
 
 // tabletop code at https://github.com/jsoma/tabletop
 // gets rows of Google Sheet
-var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1GjkKmRhAK35cBk6rcXjT8XcsGWwiqrDHGq7xvhlqLQw/edit';
+var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1LkaiDhbaWczg_KrGBxGPB4aStQBnITVPUpota8lUuVc/edit';
 // url must be set to viewable by everyone
   function init() {
     Tabletop.init( { key: publicSpreadsheetUrl,
@@ -47,16 +46,25 @@ function fillOptions() {
 			form.appendChild(option);
 			// adds a new div per object in tests
 			option.addEventListener("click", function() {
-				if (prev) {
-					prev.classList.remove("selected");
+				if (selected == -1) {
+					selected = this;
+					selected.classList.toggle("selected");
 				}
-				selected = this;
-				this.classList.toggle("selected");
-				prev = this;
-				console.log(this);
+				else if(selected == this) { 
+					selected.classList.remove("selected");
+					selected = -1;
+				}
+				else if (selected) {
+					selected.classList.remove("selected");
+					selected = this;
+					selected.classList.toggle("selected");
+				}
+
+				console.log(selected);
 			});
 		}
 	}
+	document.getElementById("loading").style.display = "none";
 	console.log("filled options");
 }
 
